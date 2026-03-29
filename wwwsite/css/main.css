@@ -1,0 +1,476 @@
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Это уберет полосу прокрутки */
+}
+a{
+    text-decoration: none;
+}
+body{
+    font-family: 'Titillium Web' ;
+    font-weight: 400;
+}
+img{
+   max-width: 100%; 
+}
+.background{
+    width: 100%;
+}
+.container
+{
+    max-width: 1440px;
+    width: 1440px;
+    margin: 0 auto;
+}
+header
+{
+ padding: 50px 0;
+}
+header .logo
+{
+    text-transform: uppercase;
+}
+.active{
+    font-size: 16px;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+}
+.nav-list {
+    display: flex;
+    gap: 20px;          
+    list-style: none;    
+}
+
+.nav-list a {
+    color: #333;
+    font-weight: 400;
+}
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    padding: 80px 0;
+}
+
+.hero--info {
+    flex: 1;            /* Занимает доступное место */
+    max-width: 500px;   /* Ограничиваем ширину текста как на макете */
+}
+
+.hero h1 {
+    font-size: 48px;
+    line-height: 1.2;
+    margin-bottom: 24px;
+}
+
+.hero img {
+    flex: 1;
+    max-width: 50%;     /* Картинка занимает половину контейнера */
+    height: auto;
+}
+header.container {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;            
+    padding: 30px 0;               
+}
+@media (max-width: 768px) {
+    header.container {
+        flex-direction: column; /* Логотип и меню встанут друг под друга */
+        gap: 20px;
+    }
+
+    .hero {
+        flex-direction: column; /* Текст и картинка встанут в колонку */
+        text-align: center;     /* Текст выровняется по центру */
+    }
+
+    .hero--info {
+        max-width: 100%;        /* Текст займет всю ширину */
+    }
+
+    .hero img {
+        max-width: 100%;        /* Картинка растянется на весь экран */
+        order: -1;              /* Картинка прыгнет ВЫШЕ текста (по желанию) */
+    }
+}
+header .logo {
+    text-transform: uppercase;
+    font-size: 40px;       /* Увеличьте это число, пока размер не устроит */
+    font-weight: 700;       /* Сделает логотип жирным, как на фото */
+    letter-spacing: 0.8px;    /* Немного раздвинет буквы для стиля */
+    color: #000;            /* Цвет текста */
+    line-height: 1;         /* Убирает лишние отступы сверху и снизу текста */
+}
+/* Обращаемся именно к картинке внутри логотипа */
+.logo img {
+    height: 30px;    /* Увеличивайте это значение, пока размер не станет нужным */
+    width: auto;     /* Пропорции сохранятся */
+    display: block;  /* Убирает лишние отступы снизу у картинки */
+}
+
+/* Оставляем header гибким, чтобы всё было в одну линию */
+header.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 0;
+}
+.container {
+    max-width: 1440px;
+    width: 90%; /* Занимает 90% экрана на маленьких мониторах */
+    margin: 0 auto;
+}
+
+/* СТИЛИ ДЛЯ ВТОРОГО БЛОКА */
+.research {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 80px; /* Отступ между картинкой и текстом */
+    padding: 100px 0;
+}
+
+.research--img {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.research--info {
+    flex: 1;
+    max-width: 500px;
+}
+
+.research h2 {
+    font-size: 40px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.research p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+/* Ссылка "View Projects" */
+.link-view {
+    color: #000;
+    text-decoration: none;
+    font-weight: 600;
+    border-bottom: 1px solid #000; /* Линия под ссылкой как на макете */
+    padding-bottom: 4px;
+    transition: 0.3s;
+}
+
+.link-view:hover {
+    opacity: 0.7;
+}
+
+/* Адаптивность для второго блока */
+@media (max-width: 992px) {
+    .research {
+        flex-direction: column; /* На планшетах картинка будет над текстом */
+        text-align: center;
+        gap: 40px;
+    }
+    
+    .research--img {
+        order: -1; /* Картинка всегда сверху */
+    }
+}
+.academy {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 100px 0;
+}
+
+.academy--info {
+    flex: 0, 0, 45%;
+    max-width: 500px; /* Чтобы текст не растягивался слишком сильно */
+}
+
+.academy h2 {
+    font-size: 42px;
+    font-weight: 700;
+    margin-bottom: 24px;
+    color: #333;
+}
+
+.academy p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 32px;
+}
+
+/* Синяя ссылка */
+.link-blue {
+    color: #1D6FF3; /* Подберите точный синий по макету */
+    text-decoration: none;
+    font-weight: 600;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.3s;
+}
+
+.link-blue:hover {
+    border-bottom-color: #1D6FF3;
+}
+
+.academy--img {
+    flex: 0 0 50%;    /* Картинка будет занимать ровно половину */
+    display: flex;
+    justify-content: flex-end; /* Прижимает картинку к правому краю контейнера */
+}
+
+.academy--img img {
+    max-width: 100%;  /* Чтобы картинка не вылезала за свои 50% */
+    height: auto;
+}
+
+/* Адаптивность */
+@media (max-width: 992px) {
+    .academy {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .academy--info {
+        max-width: 100%;
+    }
+    
+    .academy--img {
+        justify-content: center;
+    }
+}
+.blog {
+    padding: 100px 0;
+}
+
+.blog-title {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 50px;
+}
+
+/* Сетка: 3 колонки на десктопе */
+.blog-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 30px;  /* Расстояние между колонками */
+    row-gap: 60px;     /* Расстояние между рядами (увеличено из-за наложения) */
+}
+
+.blog-card {
+    display: flex;
+    flex-direction: column;
+}
+
+.card-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Тот самый белый прямоугольник */
+.card-content {
+    background-color: #ffffff;
+    width: 85%;            /* Он чуть уже картинки */
+    margin: -50px auto 0;   /* Отрицательный margin поднимает блок НА картинку */
+    padding: 30px;
+    position: relative;    /* Чтобы блок был выше картинки в слоях */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05); /* Легкая тень для объема */
+}
+
+.card-content h3 {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.3;
+    margin-bottom: 15px;
+    color: #000;
+}
+
+.card-content p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #666;
+}
+
+/* Адаптивность для карточек */
+@media (max-width: 1024px) {
+    .blog-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 колонки на планшетах */
+    }
+}
+
+@media (max-width: 650px) {
+    .blog-grid {
+        grid-template-columns: 1fr; /* 1 колонка на телефонах */
+    }
+    .card-content {
+        width: 90%;
+        padding: 20px;
+    }
+}
+@media (max-width: 1024px) {
+    .blog-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .blog-grid {
+        grid-template-columns: 1fr;
+    }
+    .card-content {
+        width: 95%;
+        margin-top: -20px; /* На мобильных наплыв поменьше */
+    }
+}
+.subscribe {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 60px 0;
+    border-top: 1px solid #eee;
+}
+
+.subscribe-form {
+    display: flex;
+    gap: 0; /* Чтобы инпут и кнопка слиплись, если нужно по макету */
+}
+
+.subscribe-form input {
+    padding: 12px 15px;
+    border: 1px solid #ccc;
+    width: 250px;
+}
+
+.subscribe-form button {
+    background: #2575e6;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    cursor: pointer;
+}
+.divider {
+    display: block;      /* Превращаем в блочный элемент, чтобы работал margin: auto */
+    margin: 15px 0;   /* Первое число — отступ сверху и снизу, auto — центровка по горизонтали */
+    width: 30px;         /* Укажите точную ширину из Figma (например, 60px или 80px) */
+    height: 2px;        /* Сохраняем пропорции */
+}
+.grey{
+    background-color: #EEEEEE;
+}
+.subscribe-bg {
+    background-color: #f5f5f5; /* Светло-серый фон */
+    padding: 80px 0;
+    margin-top: 60px;
+}
+
+.subscribe {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.subscribe--text h2 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.subscribe--text p {
+    color: #666;
+    max-width: 400px;
+}
+
+/* Форма */
+.subscribe--form {
+    display: flex;
+    width: 100%;
+    max-width: 450px;
+}
+
+.subscribe--form input {
+    flex: 1;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-right: none; /* Чтобы соединить с кнопкой */
+    outline: none;
+}
+
+.subscribe--form button {
+    padding: 15px 30px;
+    background-color: #0055ff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.subscribe--form button:hover {
+    background-color: #0044cc;
+}
+
+/* ФУТЕР СО ССЫЛКАМИ */
+.footer-links {
+    display: flex;
+    justify-content: space-between;
+    padding: 80px 0;
+    border-top: 1px solid #eee;
+}
+
+.footer-col h4 {
+    font-size: 14px;
+    letter-spacing: 1px;
+    margin-bottom: 25px;
+    color: #333;
+}
+
+.footer-col ul {
+    list-style: none;
+}
+
+.footer-col ul li {
+    margin-bottom: 12px;
+}
+
+.footer-col ul li a {
+    color: #777;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+.footer-col ul li a:hover {
+    color: #000;
+}
+
+.socials {
+    margin-top: 20px;
+    display: flex;
+    gap: 15px;
+}
+
+/* Адаптивность для футера */
+@media (max-width: 992px) {
+    .subscribe, .footer-links {
+        flex-direction: column;
+        gap: 40px;
+        text-align: center;
+    }
+    .subscribe--form {
+        margin: 0 auto;
+    }
+    .footer-col {
+        margin-bottom: 20px;
+    }
+}
